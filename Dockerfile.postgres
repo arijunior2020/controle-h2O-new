@@ -1,0 +1,9 @@
+FROM postgres:13
+
+# Defina variáveis de ambiente necessárias
+ENV POSTGRES_DB=agua_intake
+ENV POSTGRES_USER=admin
+ENV POSTGRES_PASSWORD=admin123
+
+# Exponha a porta padrão do PostgreSQL
+EXPOSE 5432

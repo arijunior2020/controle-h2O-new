@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: controle-agua-teste
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: controle-agua-backend:v1.0.1
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: "postgres-db"
+        - name: DB_PORT
+          value: "5432"
+        - name: DB_NAME
+          value: "agua_intake"
+        - name: DB_USER
+          value: "admin"
+        - name: DB_PASSWORD
+          value: "admin123"
