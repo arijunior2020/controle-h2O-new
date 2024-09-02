@@ -1,381 +1,389 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
 body {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 100vh;
-    gap: 2rem;
-    background: linear-gradient(
-            0deg,
-            rgba(206, 231, 241, 1) 0%,
-            rgba(207, 233, 243, 1) 50%,
-            rgba(184, 217, 230, 1) 100%
-        )
-        fixed;
-    overflow: hidden;
-    opacity: 0;
-    animation: showHome 4s forwards;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	min-height: 100vh;
+	gap: 2rem;
+	background: linear-gradient(
+			0deg,
+			rgba(206, 231, 241, 1) 0%,
+			rgba(207, 233, 243, 1) 50%,
+			rgba(184, 217, 230, 1) 100%
+		)
+		fixed;
+	overflow: hidden;
+	opacity: 0;
+	animation: showHome 4s forwards;
 }
 
 @keyframes showHome {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 body::before {
-    display: block;
-    content: '';
-    background: url('./assets/agua.jpg') no-repeat center center;
-    background-size: cover;
+	display: block;
+	content: '';
+	background: url('./assets/agua.jpg') no-repeat center center;
+	background-size: cover;
 }
 
 .container {
-    font-family: 'Poppins';
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	font-family: 'Poppins';
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .container span {
-    font-size: 1.5rem;
-    color: #3ca8e6;
-}
-
-.titulo {
-    margin-bottom: 2rem;
+	font-size: 1.5rem;
+	color: #3ca8e6;
 }
 
 h1 {
-    font-size: 2.5rem;
-    background: rgba(0, 0, 0, 0)
-        linear-gradient(300deg, #ffffff, #4d5b6b, #232547) repeat scroll 0% 0%/200%
-        200%;
-    color: transparent;
-    background-clip: border-box;
-    background-clip: text;
-    margin: 12px 0px;
+	font-size: 2.5rem;
+	background: rgba(0, 0, 0, 0)
+		linear-gradient(300deg, #ffffff, #4d5b6b, #232547) repeat scroll 0% 0%/200%
+		200%;
+	color: transparent;
+	background-clip: border-box;
+	background-clip: text;
+	margin: 12px 0px;
+	text-align: center;
 }
 
 h1:hover {
-    animation: GradientAnimation 2s ease infinite;
+	animation: GradientAnimation 2s ease infinite;
 }
 
 @keyframes GradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .form {
-    background-color: #f1f0f080;
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 32px;
-    width: 350px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
+	background-color: #f1f0f080;
+	padding: 2rem;
+	margin: 2rem 0;
+	border-radius: 32px;
+	width: 350px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 10px 10px 52px 0px rgba(0, 0, 0, 0.75);
 }
 
 .input-group {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .label-style {
-    display: inline-block;
-    text-align: right;
+	display: inline-block;
+	text-align: right;
 }
 
-.input-style {
-    font-size: 14px;
-    border: 1px solid #ccc;
-    padding: 4px;
-    width: 100px;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+.input-style-nome,
+.input-style-grupo,
+.input-style-peso {
+	font-size: 14px;
+	border: 1px solid #ccc;
+	padding: 4px;
+	width: 100px;
+	box-sizing: border-box;
+	font-family: 'Poppins';
+}
+
+.input-style-nome {
+	margin-left: 52px;
+}
+
+.input-style-peso {
+	margin-left: 24px;
 }
 
 .buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Espaçamento entre os botões */
-    margin-top: 1rem; /* Espaço acima dos botões */
+	display: flex;
+	justify-content: center;
+	gap: 10px; /* Espaçamento entre os botões */
+	margin-top: 1rem; /* Espaço acima dos botões */
 }
 
 button {
-    background-color: #3ca8e6;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 0 18px;
-    line-height: 50px;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
+	background-color: #3ca8e6;
+	border: 2px solid #422800;
+	border-radius: 30px;
+	box-shadow: #422800 4px 4px 0 0;
+	color: white;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 18px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
 }
 
 button:hover {
-    background-color: #9281ee;
+	background-color: #9281ee;
 }
 
 #mostrar-resultados {
-    background-color: #ff5733; /* Cor de fundo do botão Resultados */
+	background-color: #ff5733; /* Cor de fundo do botão Resultados */
 }
 
 #mostrar-resultados:hover {
-    background-color: #c13d26; /* Cor de fundo do botão Resultados ao passar o mouse */
+	background-color: #c13d26; /* Cor de fundo do botão Resultados ao passar o mouse */
 }
 
 .resultados {
-    position: relative;
-    height: 2rem;
-    width: 100%;
+	position: relative;
+	height: 2rem;
+	width: 100%;
 }
 
 .result_share {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	height: 100%;
 }
 
 .result_share > p {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .spinner {
-    visibility: hidden;
-    opacity: 0;
-    width: 25px;
-    height: 25px;
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #3498db;
-    border-radius: 50%;
-    animation: spin 4s linear infinite;
-    margin: 10px auto;
-    transition: visibility 0s, opacity 0.5s linear;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
+	visibility: hidden;
+	opacity: 0;
+	width: 25px;
+	height: 25px;
+	border: 6px solid #f3f3f3;
+	border-top: 6px solid #3498db;
+	border-radius: 50%;
+	animation: spin 4s linear infinite;
+	margin: 10px auto;
+	transition: visibility 0s, opacity 0.5s linear;
+	position: absolute;
+	top: 50%;
+	left: 45%;
+	transform: translate(-50%, -50%);
 }
 
 .spinner.show {
-    visibility: visible;
-    opacity: 1;
+	visibility: visible;
+	opacity: 1;
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    font-family: 'Poppins'; /* Mesma fonte usada no resto da aplicação */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	font-family: 'Poppins'; /* Mesma fonte usada no resto da aplicação */
 }
 
 .overlay-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 80%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Espaçamento entre o conteúdo do modal */
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	text-align: center;
+	width: 80%;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px; /* Espaçamento entre o conteúdo do modal */
 }
 
 .overlay-content input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    font-family: 'Poppins';
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-family: 'Poppins';
 }
 
 .overlay-content button {
-    background-color: #3ca8e6;
-    border: 2px solid #422800;
-    border-radius: 30px;
-    box-shadow: #422800 4px 4px 0 0;
-    color: white;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 0 18px;
-    line-height: 50px;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    margin-top: 10px;
+	background-color: #3ca8e6;
+	border: 2px solid #422800;
+	border-radius: 30px;
+	box-shadow: #422800 4px 4px 0 0;
+	color: white;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 18px;
+	padding: 0 18px;
+	line-height: 50px;
+	text-align: center;
+	text-decoration: none;
+	user-select: none;
+	margin-top: 10px;
 }
 
 .overlay-content button:hover {
-    background-color: #9281ee;
+	background-color: #9281ee;
 }
 
 .result-list {
-    list-style-type: none;
-    padding: 0;
+	list-style-type: none;
+	padding: 0;
 }
 
 .result-list li {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    margin-bottom: 10px;
-    background: #f1f0f080;
-    padding: 10px;
-    border-radius: 8px;
-    border-left: 5px solid #3ca8e6;
+	font-family: 'Poppins', sans-serif;
+	font-size: 18px;
+	margin-bottom: 10px;
+	background: #f1f0f080;
+	padding: 10px;
+	border-radius: 8px;
+	border-left: 5px solid #3ca8e6;
 }
 
 .result-list li span {
-    font-weight: bold;
-    color: #3ca8e6;
+	font-weight: bold;
+	color: #3ca8e6;
 }
 
 .result-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	font-family: 'Poppins', sans-serif;
+	color: #333;
 }
 
-.result-table th, .result-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+.result-table th,
+.result-table td {
+	border: 1px solid #ccc;
+	padding: 10px;
+	text-align: left;
 }
 
 .result-table th {
-    background-color: #f1f0f080;
-    color: #3ca8e6;
-    font-weight: bold;
-    text-transform: uppercase;
+	background-color: #f1f0f080;
+	color: #3ca8e6;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
 .result-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+	background-color: #f9f9f9;
 }
 
 .result-table tr:hover {
-    background-color: #f1f0f080;
+	background-color: #f1f0f080;
 }
 
 @media (max-width: 900px) {
-    body {
-        grid-template-columns: 1fr;
-    }
+	body {
+		grid-template-columns: 1fr;
+	}
 
-    body::before {
-        display: none;
-    }
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding: 1rem;
-    }
+	body::before {
+		display: none;
+	}
+	h1 {
+		font-size: 2rem;
+		text-align: center;
+		padding: 1rem;
+	}
 
-    .form {
-        padding: 2rem;
-        width: 250px;
-    }
+	.form {
+		padding: 2rem;
+		width: 250px;
+	}
 
-    .buttons {
-        margin-top: 1.5rem;
-    }
+	.buttons {
+		margin-top: 1.5rem;
+	}
 }
 
 @media (max-width: 500px) {
-    body {
-        grid-template-columns: 1fr;
-    }
+	body {
+		grid-template-columns: 1fr;
+	}
 
-    body::before {
-        display: none;
-    }
+	body::before {
+		display: none;
+	}
 
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        padding: 1rem;
-    }
+	h1 {
+		font-size: 2rem;
+		text-align: center;
+		padding: 1rem;
+	}
 
-    .form {
-        padding: 2rem;
-        width: 250px;
-    }
+	.form {
+		padding: 2rem;
+		width: 250px;
+	}
 
-    .buttons {
-        margin-top: 1.5rem;
-    }
+	.buttons {
+		margin-top: 1.5rem;
+	}
 
-    .result_share > p {
-        font-weight: bold;
-        width: 60%;
-        text-align: center;
-    }
+	.result_share > p {
+		font-weight: bold;
+		width: 60%;
+		text-align: center;
+	}
 }
 
-@media (max-width: 350px) {
-    .titulo {
-        margin-bottom: 1rem;
-    }
+@media (max-width: 300px) {
+	.titulo {
+		margin-bottom: 1rem;
+	}
 
-    h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 1rem;
-    }
+	h1 {
+		font-size: 1.5rem;
+		text-align: center;
+		padding: 1rem;
+	}
 
-    .form {
-        padding: 2rem;
-        width: 200px;
-    }
+	.form {
+		padding: 2rem;
+		width: 200px;
+	}
 
-    .label-style {
-        font-size: 14px;
-    }
+	.label-style {
+		font-size: 14px;
+	}
 
-    .buttons {
-        margin-top: 1.5rem;
-    }
+	.buttons {
+		margin-top: 1.5rem;
+	}
 }
