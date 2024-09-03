@@ -126,6 +126,157 @@ kubectl port-forward service/frontend-service 8080:80 -n controle-agua-prod
 Agora, você pode acessar a aplicação no navegador através do endereço [http://localhost:8080](http://localhost:8080).
 
 
+# Comandos Úteis para Docker, Kind e Kubectl
+
+**Listar containers:**
+   ```
+   docker ps
+   ```
+
+Adicione -a para listar todos os containers, incluindo os que estão parados:
+    ```
+    docker ps -a
+    ```
+
+**Iniciar/parar/reiniciar containers:**
+```
+docker start <container_id>
+docker stop <container_id>
+docker restart <container_id>
+```
+
+**Remover containers:**
+```
+docker rm <container_id>
+```
+
+**Listar imagens:**
+```
+docker images
+```
+
+**Remover imagens:**
+```
+docker rmi <image_id>
+```
+
+**Fazer pull de uma imagem do Docker Hub:**
+```
+docker pull <image_name>:<tag>
+```
+
+**Construir uma imagem a partir de um Dockerfile:**
+```
+docker build -t <image_name>:<tag> .
+```
+
+**Executar um container em modo interativo:**
+```
+docker run -it <image_name> /bin/bash
+```
+
+### Comandos Úteis do Kind
+
+**Criar um cluster:**
+```
+kind create cluster --name <cluster_name>
+```
+
+**Listar clusters:**
+```
+kind get clusters
+```
+
+**Excluir um cluster:**
+```
+kind delete cluster --name <cluster_name>
+```
+
+**Carregar uma imagem Docker no cluster:**
+```
+kind load docker-image <image_name>:<tag> --name <cluster_name>
+```
+
+**Conectar ao container do control-plane:**
+```
+docker exec -it <control_plane_container_id> /bin/bash
+```
+
+## Comandos Úteis do Kubectl
+
+**Listar todos os pods em todos os namespaces:**
+```
+kubectl get pods --all-namespaces
+```
+
+**Listar todos os serviços:**
+```
+kubectl get services
+```
+
+**Listar todos os nodes:**
+```
+kubectl get nodes
+```
+
+**Obter detalhes de um pod específico:**
+```
+kubectl describe pod <pod_name>
+```
+
+**Aplicar uma configuração YAML (criar/atualizar recursos):**
+```
+kubectl apply -f <file.yaml>
+```
+
+**Deletar um recurso (pod, service, deployment, etc.):**
+```
+kubectl delete <resource_type> <resource_name>
+```
+
+**Executar um comando em um pod:**
+```
+kubectl exec -it <pod_name> -- <command>
+```
+
+**Ver logs de um pod:**
+```
+kubectl logs <pod_name>
+```
+
+**Para acompanhar os logs em tempo real, adicione -f:**
+```
+kubectl logs -f <pod_name>
+```
+
+**Fazer port-forward de um serviço para sua máquina local:**
+```
+kubectl port-forward svc/<service_name> <local_port>:<service_port>
+```
+
+**Verificar os recursos de um deployment:**
+```
+kubectl get deployment <deployment_name>
+```
+
+**Realizar rollout de um deployment (atualização controlada):**
+
+***Ver o status do rollout:***
+```
+kubectl rollout status deployment/<deployment_name>
+```
+
+**Fazer rollback para a versão anterior:**
+```
+kubectl rollout undo deployment/<deployment_name>
+```
+
+**Escalar réplicas de um deployment:**
+
+***Escalar para um número específico de réplicas:***
+```
+kubectl scale deployment/<deployment_name> --replicas=<number_of_replicas>
+```
 
 ## Licença
 
