@@ -129,9 +129,3 @@ Agora, você pode acessar a aplicação no navegador através do endereço [http
 ## Licença
 
 Este projeto é licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
-
-## Contato
-
-- **Nome:** Arimateía Júnior
-- **E-mail:** arimateiajunior.tic@gmail.com
-- **WhatsApp:** +55 85 98776-4006
