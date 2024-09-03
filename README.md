@@ -54,6 +54,7 @@ Navegue até a pasta `backend` e execute:
 
 ```bash
 docker build -t controle-agua-backend:v1.0.0 -f Dockerfile.backend .
+```
 
 #### Frontend
 
@@ -61,6 +62,7 @@ Navegue até a pasta `frontend` e execute:
 
 ```bash
 docker build -t controle-agua-frontend:v1.0.0 -f Dockerfile.frontend .
+```
 
 #### Banco de Dados - PostgreSQL
 
@@ -68,6 +70,7 @@ Navegue até a pasta `raiz` e execute:
 
 ```bash
 docker build -t controle-agua-db:v1.0.0 -f Dockerfile.postgres .
+```
 
 ### 2. Criar um Cluster no Kind
 
@@ -75,6 +78,7 @@ Crie um cluster Kubernetes utilizando `kind`:
 
 ```bash
 kind create cluster --name controle-agua-prod
+```
 
 ### 3. Criar o Namespace
 
@@ -82,6 +86,7 @@ Crie um namespace para a aplicação:
 
 ```bash
 kubectl create namespace controle-agua-prod
+```
 
 ### 4. Carregar as Imagens no Cluster
 
@@ -91,6 +96,7 @@ Para carregar as imagens Docker que você acabou de buildar no cluster `kind`, u
 kind load docker-image controle-agua-backend:v1.0.0 --name controle-agua-prod
 kind load docker-image controle-agua-frontend:v1.0.0 --name controle-agua-prod
 kind load docker-image controle-agua-db:v1.0.0 --name controle-agua-prod
+```
 
 ### 5. Aplicar os Deployments e Services
 
@@ -107,6 +113,7 @@ kubectl apply -f postgres-deployment.yml -n controle-agua-prod
 kubectl apply -f postgres-service.yml -n controle-agua-prod
 
 Poderia ser utilizado apenas um arquivo de deployment e incluido o service dentro dele mais preferi separar para deixar mais fácil de entendimento.
+```
 
 ### 6. Configurar o Port-Forward
 
@@ -116,6 +123,8 @@ Por fim, você pode acessar a aplicação através do serviço frontend utilizan
 kubectl port-forward service/frontend-service 8080:80 -n controle-agua-prod
 
 Agora, você pode acessar a aplicação no navegador através do endereço [http://localhost:8080](http://localhost:8080).
+
+```
 
 ## Licença
 
