@@ -121,10 +121,11 @@ Por fim, você pode acessar a aplicação através do serviço frontend utilizan
 
 ```bash
 kubectl port-forward service/frontend-service 8080:80 -n controle-agua-prod
+```
 
 Agora, você pode acessar a aplicação no navegador através do endereço [http://localhost:8080](http://localhost:8080).
 
-```
+
 
 ## Licença
 
