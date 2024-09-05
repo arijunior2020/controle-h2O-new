@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: controle-agua-frontend:v1.0.0
+        image: controle-agua-frontend:v1.0.5
         ports:
         - containerPort: 80

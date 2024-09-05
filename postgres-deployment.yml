@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: controle-agua-db:v1.0.0
+        image: controle-agua-db:v1.0.5
         ports:
         - containerPort: 5432
         env:

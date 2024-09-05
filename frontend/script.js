@@ -16,7 +16,7 @@ document.getElementById('agua-form').onsubmit = function (event) {
     spinner.classList.add('show');
     result.innerHTML = '';
 
-    fetch('http://localhost:5000/calcular', {
+    fetch('http://backend-service:5000/calcular', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ document.getElementById('resultado-form').onsubmit = function (event) {
     event.preventDefault();
     const nome = document.getElementById('nome-consulta').value;
 
-    fetch(`http://localhost:5000/consultas/${nome}`, {
+    fetch(`http://backend-service:5000/calcular/${nome}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
