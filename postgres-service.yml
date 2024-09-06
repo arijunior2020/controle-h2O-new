@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres-db
-  namespace: controle-agua-teste
+  namespace: controle-agua-prod
 spec:
   selector:
     app: postgres

@@ -11,7 +11,7 @@ def create_app():
     CORS(app)  # Habilita o CORS na aplicação
 
     # Configurações do banco de dados
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin123@postgres:5432/agua_intake'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:admin123@postgres-db:5432/agua_intake'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
     # Inicializa o SQLAlchemy com a aplicação Flask

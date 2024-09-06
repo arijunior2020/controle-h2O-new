@@ -125,6 +125,12 @@ kubectl port-forward service/frontend-service 8080:80 -n controle-agua-prod
 
 Agora, você pode acessar a aplicação no navegador através do endereço [http://localhost:8080](http://localhost:8080).
 
+Será necessário realizar o port-forward do serviço do Backend para permitir a conexão com o Frontend
+
+```bash
+kubectl port-forward service/backend-service 5000:5000 -n controle-agua-prod
+```
+Agora, você pode acessar o Backend no navegador através do endereço [http://localhost:5000](http://localhost:5000).
 
 # Comandos Úteis para Docker, Kind e Kubectl
 
